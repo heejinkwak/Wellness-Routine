@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINAL PROJECT</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap">
+    <link href="css/vegas.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <style>
+        html{
+            font-size:16px;
+            font-family:'Urbanist',sans-serif;
+        }
+
+        body {
+        margin: 0;
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        .icons{
+            margin: 0px; 
+            display: flex;
+            align-items: center;
+            background-color:beige;
+            padding-top:10px;
+
+        }
+
+        .icon_nav{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; 
+            position: absolute; 
+        
+        }
+
+        svg{
+            width:50px;
+            height:50px;
+            margin-left:5px;
+        }
+        
+        h1{
+            margin-right:100px;
+            margin-top:0;
+        }
+
+        .description{
+            display:flex;
+            flex-wrap:wrap;
+            margin:3px;
+            margin-top:20px;
+
+        }
+
+        .right h1{ /*일단 보류!!! */
+            font-family:'Urbanist',sans-serif;
+            margin-top:500px;
+            margin-left: 30px;
+            font-size:9em;
+            color: rgb(212, 173, 141);
+            white-space:pre-line;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .w3-sidebar {
+            font-family:'Urbanist',sans-serif;
+            background-color:rgb(249, 246, 242);
+            width: 200px;
+            right: 0;
+            
+        }
+
+        .w3-beige{
+            background-color:rgb(249, 246, 242);
+            font-family:'Urbanist',sans-serif;
+        }
+
+        .w3-container h1 {
+            font-family:'Urbanist',sans-serif;
+        }
+
+        .w3-white h1{
+            font-family:'Urbanist',sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;" id="rightMenu">
+        <button onclick="closeRightMenu()" class="w3-bar-item w3-button w3-large">Close &times;</button>
+        <a href="About.html" class="w3-bar-item w3-button">About</a>
+        <a href="Workout.html" class="w3-bar-item w3-button">Workouts</a>
+        <a href="Credits.html" class="w3-bar-item w3-button">Source / Credits</a>
+        <a href="Log.html" class="w3-bar-item w3-button">Excercise Log</a>
+
+    </div>
+    <div class="w3-beige">
+        <button class="w3-button w3-beige w3-xlarge w3-right" onclick="openRightMenu()">&#9776;</button>
+        <div class="w3-container">
+          <h1 style="font-style: italic; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.427);">Excercise Anytime, Anywhere!</h1>
+        </div>
+    </div>
+      
+
+    <div class="description">
+       <div class="right">
+        <h1>Wellness Routine</h1>
+       </div>
+    </div>
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/vegas.min.js"></script>
+    <script>
+        $(function(){
+          $('body').vegas({
+            slides:[
+              {src:'images/background3.jpg'},
+              {src:'images/background1.jpg'},
+              {src:'images/Background_3.png'},
+              
+            ],
+            delay:3500
+          });			
+        });
+
+
+        function openRightMenu() {
+        document.getElementById("rightMenu").style.display = "block";
+        }
+
+        function closeRightMenu() {
+        document.getElementById("rightMenu").style.display = "none";
+        }
+
+      </script>		
+        
+    </div>
+</body>
+</html>

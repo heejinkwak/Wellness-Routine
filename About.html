@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap">
+</head>
+<style>
+    *{box-sizing:border-box;}
+    html{
+            font-size:16px;
+            font-family:"Urbanist",sans-serif;}
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:20px;
+        background-color: rgb(62, 79, 12);
+    }
+
+    .header h1{
+        color:rgb(248,237,227);
+        margin:0;
+        order: -1; /* Move h3 to the left */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .header h3 {
+        font-size:14px;
+        margin: 0; 
+    }
+    .header a{
+        text-decoration:none;
+    }
+
+    .header a:visited{
+            color:rgb(248,237,227);
+        }
+
+    .header h3:hover{
+        color:whitesmoke;
+    }
+    
+
+    .about{
+        font-size:2em;
+        text-align:center;
+        padding:10px;
+        background-color:rgb(248, 237, 227);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.427);
+    }
+
+    .description{
+        font-size:1.5rem;
+        padding:10px;
+        background-color:rgb(248, 237, 227);
+        text-align:center;
+
+    }
+    .description2{
+            display:flex;
+            text-align:center;
+            justify-content:space-around;
+            background-color: rgb(248, 237, 227);
+            margin:0px;
+        }
+
+    .item{
+        flex:1;
+        border:2px solid #5d924e;
+        padding:15px;
+        margin:10px;
+        border-radius:10px;
+        
+    }
+    .item:hover{
+        border:2px solid #324f2a;
+        transform: scale(1.03);
+        
+    }
+    .stay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+
+
+</style>
+<body>
+    <div class="header" id="myHeader">
+        <h1>Wellness Routine</h1>
+        <a href='index.html'><h3> Back to main </h3></a>
+    </div>
+
+    <div class="about">
+        <h1>About</h1>
+    </div>
+
+    <div class="description">
+        <p>Wellness Routine offers you the flexibility to excercise anywhere at your designated time. </p>
+        <p>There are no requirements or equipments needed. Simply use your device to visit this website and start excercising. </p>
+        <p>All you need is your personal space, and you are all set! </p>
+        <p>In just about 15 minutes of your time, you can enhance your daily well-being and be brighter than ever before.</p>
+        
+    </div>
+        
+    <div class="description2">
+        <div class="item">
+            <h1>Who?</h1>
+            <img src="images/who_2.png">
+            <p> - People who don't have time to go the gym </p>
+            <p> - People who are too shy to go to the gym </p>
+            <p> - Students who want to take breaks in between studying time </p>
+            <p> - People who want to learn simple excercise movements </p>
+            <p> - Anyone who wants to have a healthy body!  </p>
+        
+        </div>
+        <div class="item">
+            <h1>How?</h1>
+            <img src="images/how2.png">
+            <p> - Simply click on the body part of your choice, and Wellness Routine will assist you with a quick and simple workout. </p>
+            
+            <p>- Stretching is also included as it is a very important process during a workout. </p>   
+        </div>
+        <div class="item">
+            <h1>When?</h1>
+           <img src="images/when.png">
+            <p>- In the morning</p>
+            <p>- During a lunch break</p>
+            <p>- Before going to bed</p>
+            <p>- Literally whenever you are free!</p>
+        </div>
+
+    </div>
+<script>
+    window.onscroll = function() {myFunction()};
+        
+    var header = document.getElementById("myHeader");
+    var stay = header.offsetTop;
+        
+    function myFunction() {
+        if (window.pageYOffset > stay) {
+        header.classList.add("stay");
+        } else {
+        header.classList.remove("stay");
+        }
+    }
+    </script>
+
+        
+</body>
+</html>

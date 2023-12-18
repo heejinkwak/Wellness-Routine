@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap">
+    
+</head>
+<style>
+    html{
+            font-size:16px;
+            font-family:"Urbanist",sans-serif;
+            background-color:rgb(248, 237, 227);
+        }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:20px;
+        background-color:rgb(62,79,12);
+       
+    }
+
+    .header h1{
+        margin:0;
+        order: -1; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .header h3 {
+        font-size:14px;
+        margin: 0; 
+    }
+    .header a{
+        text-decoration:none;
+    }
+
+    .header a:visited{
+        color:rgb(248, 237, 227);
+        }
+
+    .header h3:hover{
+        color:whitesmoke;
+    }
+
+    .workout{
+        font-size:2em;
+        text-align:center;
+        padding:5px;
+        /*background-color:rgb(249, 246, 242);*/
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.427)
+    }
+    
+
+    .line2{
+        text-align:center;
+        font-size:2rem;
+        padding:5px;
+    }
+
+    .bodies{
+        display:flex;
+        justify-content:space-around;
+        text-align:center;
+        
+        padding:50px;
+    }
+    .bodies2{
+        display:flex;
+        justify-content:space-around;
+        text-align:center;
+        padding:50px;
+    }
+
+    .arms img:hover,
+    .abs img:hover,
+    .neck_shoulder img:hover,
+    .legs img:hover,
+    .back img:hover,
+    .fullbody img:hover{
+        filter:brightness(60%);
+        transform: scale(1.03);
+    }
+
+
+ 
+</style>
+
+
+<body>
+    <div class="header">
+        <h1 style="color:rgb(248, 237, 227)">Wellness Routine</h1>
+        <a href='index.html'><h3> Back to main </h3></a>
+    </div>
+
+    <div class="workout">
+        <h1>WORKOUT</h1>
+    </div>
+
+    <div class="line2">
+        Choose a body part to focus on for today's workout.
+    </div>
+
+    <div class="bodies">
+        <div class="arms">
+            <h3>Arms</h1>
+            <a href="Arms.html">
+            <img src ="images/ARMSS.png">
+            </a>
+        </div>
+
+        <div class="abs">
+            <h3>Abs</h3>
+            <a href="Abs.html">
+                <img src="images/ABS.png">
+            </a>
+        </div>
+
+        <div class="neck_shoulder">
+            <h3>Neck & Shoulder</h3>
+            <a href="Neck_shoulder.html">
+                <img src="images/neck_shoulder.png">
+            </a>
+        </div>
+
+</div>
+    <div class="bodies2">
+        <div class="legs">
+            <h3>Legs</h3>
+            <a href="Legs.html">
+                <img src="images/legs.png">
+            </a>
+            
+        </div>
+
+        <div class="back">
+            <h3>Back</h3>
+            <a href="Back.html">
+                <img src="images/back.png">
+            </a>
+            
+        </div>
+
+        <div class="fullbody">
+            <h3>Full Body</h3>
+            <a href="Fullbody.html">
+                <img src="images/full_body.png">
+            </a>
+        </div>
+   </div>
+</div>
+
+   
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neck & Shoulder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+    <style>
+        *{box-sizing:border-box;} /*Leftside랑 main을 30:70으로 한 페이지에 나눌 수 있게 해줌 !! 꼭 필요 !!!!!!!*/
+        
+        html{font-size:16px;
+        font-family: 'Urbanist',sans-serif;}
+
+        body{
+            margin:0;
+        } 
+        .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px;
+        background-color:rgb(62, 79, 12);
+        }
+
+        .header h1{
+            color: whitesmoke;
+            padding:5px;
+            margin:0;
+            order: -1; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header h3 {
+            font-size:14px;
+            margin: 0; 
+        }
+        .header a{
+            text-decoration:none;
+        }
+
+        .header a:visited{
+            color:whitesmoke;
+        }
+
+        .header h3:hover{
+            color:rgb(248, 237, 227);
+        }
+
+        .arms{
+            font-size:2em;
+            text-align:center;
+            padding:5px;
+            background-color:rgb(62, 79, 12);
+        }
+
+        .header img{
+        margin:0;
+        order: -1; 
+        }
+
+        .header h3 {
+            font-size:14px;
+            margin: 0; 
+        }
+        .header a{
+            text-decoration:none;
+        }
+
+
+        .main{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .intro{
+            flex:40%;
+            background-color: rgb(248, 237, 227);
+            padding:20px;
+        }
+        .video{
+            flex:60%;
+            background-color: rgb(248, 237, 227);
+            padding:20px;
+        } /*나중에 배경 색 바꿔보기?*/  
+
+        .description {
+            display: none;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease; 
+        }
+
+        .recdescription{
+            display: none;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease; 
+        }
+        .excercise_vid iframe{
+            box-shadow:5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        #neckImage:hover{
+            transform:scale(1.03);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Wellness Routine</h1>
+    <a href='Workout.html'><h3> Back to workout</h3></a>
+</div>
+
+
+<div class="main">
+    <div class="intro">
+        <h3>Click to see description</h3>
+        <img id="neckImage" src="images/neck_shouder_tab.png" onclick="toggleDescription()">
+        <div id="neckDescription" class="description">
+            <h2>The neck muscles play a crucial role in providing stability to the head and upper part of the spine. It helps your shoulder blades move as well. Simultaneously, the shoulder muscles help stabilize the shoulder joint, allowing the arm to move in diverse directions. Keeping your neck and shoulder muscles healthy is very significant because they are particularly prone to injuries.</h2>
+            <h2> </h2>
+            <h2>Recommend to...</h2>
+        <ul>
+            <li>People who have tight necks. </li>
+            <li>People who spend an extended amount of period in front of computer and desks. </li>
+            <li>People who want to have better posture. </li>
+        </ul>
+        
+        </div>
+        
+
+    </div>
+
+
+    <div class="video">
+        <h2>Excercise</h2>
+        <div class="excercise_vid">
+            <iframe width="600" height="315" src="https://www.youtube.com/embed/Llft_JbD5ys?si=fO5htW3oCcvvlysu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <h2>Stretching</h2>
+            <iframe width="600" height="315" src="https://www.youtube.com/embed/s-7lyvblFNI?si=mb50A0SEBkciS3C5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+
+
+<script>
+    function toggleDescription() {
+        var description = document.getElementById('neckDescription');
+        
+
+        if (description.style.display === 'none') {
+            description.style.display = 'block';
+            
+            setTimeout(function() {
+                description.style.opacity = '1';
+                
+            }, 10); 
+        } else {
+            description.style.opacity = '0';
+            
+            setTimeout(function() {
+                description.style.display = 'none';
+            }, 500); 
+        }
+    }
+
+</script>
+
+</body>
+</html>

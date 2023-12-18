@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arm Workout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+    <style>
+        *{box-sizing:border-box;} /*Leftside랑 main을 30:70으로 한 페이지에 나눌 수 있게 해줌 !! 꼭 필요 !!!!!!!*/
+        
+        html{font-size:16px;
+        font-family: 'Urbanist',sans-serif;}
+
+        body{
+            margin:0;
+        } 
+        .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px;
+        background-color:rgb(62, 79, 12);
+        }
+
+        .header h1{
+            background-color:rgb(62, 79, 12);
+            padding:5px;
+            margin:0;
+            order: -1; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .header h3 {
+            font-size:14px;
+            margin: 0;
+        }
+        .header a{
+            text-decoration:none;
+        }
+
+        .header a:visited{
+            color:whitesmoke;
+        }
+
+        .header h3:hover{
+            color:rgb(248, 237, 227);
+        }
+
+        .arms{
+            font-size:2em;
+            text-align:center;
+            padding:5px;
+            background-color:rgb(62, 79, 12);
+        }
+
+        .header img{
+        margin:0;
+        order: -1; 
+        }
+
+        .header h3 {
+            font-size:14px;
+            margin: 0; 
+        }
+        .header a{
+            text-decoration:none;
+        }
+
+
+        .main{
+            display:flex;
+            flex-wrap:wrap;
+        }
+        .intro{
+            flex:40%;
+            background-color: rgb(248, 237, 227);
+            padding:20px;
+        }
+        .video{
+            flex:60%;
+            background-color: rgb(248, 237, 227);
+            padding:20px;
+        } 
+
+        .description {
+            display: none;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .recdescription{
+            display: none;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease; 
+        }
+
+        .excercise_vid iframe{
+            box-shadow:5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        #armImage:hover{
+            transform:scale(1.03)
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Wellness Routine</h1>
+    <a href='Workout.html'><h3> Back to workout</h3></a>
+</div>
+
+
+<div class="main">
+    <div class="intro">
+        <h3>Click to see description</h3>
+        <img id="armImage" src="images/arm_tab.png" onclick="toggleDescription()">
+        <div id="armDescription" class="description">
+            <h2>The arm consists of many muscle parts. It is mainly divided into two parts, the upper arm and forearm. The upper arm (muscles) assist with big and small movements, while the forearm muscles control the fingers and thumbs.</h2>
+            <h2> </h2>
+            <h2>Recommend to...</h2>
+        <ul>
+            <li>People who want better posture</li>
+            <li>People who want a better physique</li>
+            <li>People who want to keep a strong upper body</li>
+        </ul>
+        
+        </div>
+        
+
+    </div>
+
+
+    <div class="video">
+        <h2>Excercise</h2>
+        <div class="excercise_vid">
+            <iframe width="600" height="315" src="https://www.youtube.com/embed/5JEh9qaEEKA?si=1eGedq82QH9yQyyj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h2>Stretching</h2>
+        <iframe width="600" height="315" src="https://www.youtube.com/embed/svA6rVkT9-Y?si=qsg43DnbDYGGQN9F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+
+
+<script>
+    function toggleDescription() {
+        var description = document.getElementById('armDescription');
+        
+
+        if (description.style.display === 'none') {
+            description.style.display = 'block';
+            
+            setTimeout(function() {
+                description.style.opacity = '1';
+                
+            }, 10); 
+        } else {
+            description.style.opacity = '0';
+            
+            setTimeout(function() {
+                description.style.display = 'none';
+            }, 500); 
+        }
+    }
+
+</script>
+
+</body>
+</html>

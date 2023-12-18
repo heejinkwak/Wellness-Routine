@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap">
+</head>
+<style>
+    *{box-sizing:border-box;}
+        
+    html{
+        scroll-behavior: smooth;
+        font-size:16px;
+        font-family:"Urbanist",sans-serif;
+        background-color:rgb(248, 237, 227);
+    }
+    
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:20px;
+        background-color:rgb(62, 79, 12);
+        z-index: 1; /*Header가 img hover보다 위에 있게 해줌*/
+    }
+
+    .header h1{
+        margin:0;
+        order: -1; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .header h3 {
+        font-size:14px;
+        margin: 0; 
+    }
+    .header a{
+        text-decoration:none;
+    }
+
+    .header h3:hover{
+        color:whitesmoke;
+    }
+    .header a:visited{
+            color:rgb(248,237,227);
+        }
+    
+
+    .about{
+        font-size:2em;
+        text-align:center;
+        padding:10px;
+        /*background-color:rgb(249, 246, 242);*/
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.427);
+    }
+
+    .description{
+        font-size:1.5rem;
+        padding:10px;
+        /*background-color:rgb(248, 237, 227);*/
+        text-align:center;
+
+    }
+    .description2{
+        display:flex;
+        flex-wrap:wrap;
+        /*flex-direction:column;*/
+        text-align:center;
+        justify-content:space-around;
+        /*background-color: rgb(248, 237, 227);*/
+        margin:0px;
+        }
+
+    .item {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin: 10px;
+        text-align: center; 
+        width:40%;
+        border:2px solid rgba(62, 79, 12, 0.596);
+        border-radius:10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .item:hover{
+        transform: scale(1.03);
+    }
+
+    .item img {
+        margin-bottom: 10px;
+    }
+
+    @media only screen and (max-width:800px){
+        .description2{flex-direction: column;
+        }
+        .item {
+        width: 80%; 
+        margin: 10px auto;
+        }
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+
+</style>
+<body>
+    <div class="header" id="myHeader">
+        <h1 style="color:rgb(248, 237, 227)">Wellness Routine</h1>
+        <a href='index.html'><h3> Back to main </h3></a>
+    </div>
+
+    <div class="about">
+        <h1>Sources / Credits</h1>
+    </div>
+
+    <div class="description">
+        <h2>All excercise videos are sourced from the following: </h2>
+    </div>
+        
+    <div class="description2">
+        <div class="item">
+            <h1>XHIT Daily</h1>
+            <h3>https://www.youtube.com/@xhit</h3>
+            <img src="images/Xhit.png">
+        </div>
+        <div class="item">
+            <h1>Mady Morrison</h1>
+            <h3>https://www.youtube.com/@madymorrison</h3>
+            <img src="images/MadyMorrison.png">
+        </div>
+        <div class="item">
+            <h1>Run and Strech</h1>
+            <h3>https://www.youtube.com/@RunAndStretch</h3>
+           <img src="images/RunandStretch.png"> 
+        </div>
+        <div class="item">
+            <h1>Tone & Tighten</h1>
+            <h4>https://www.youtube.com/channel/UCJASBOyF4Fkd26SIwRhLuZw</h4>
+            <img src="images/Tone_Tighten.png">
+        </div>
+
+        <div class="item">
+            <h1>Vanessa B Health TV</h1>
+            <h4>https://www.youtube.com/channel/UCYxe1PVcWxlXgxLzmp6Dtig</h4>
+            <img src="images/VanessaTV.png">
+        </div>
+
+        <div class="item">
+            <h1>MrandMrsMuscle</h1>
+            <h3>https://www.youtube.com/@Mrandmrsmuscle</h3>
+            <img src="images/MrandMrsMuscle.png">
+        </div>
+
+        <div class="item">
+            <h1>Cleveland Clinic</h1>
+            <h3>https://my.clevelandclinic.org</h3>
+            <img src="images/Cleveland Clinic.png">
+        </div>
+    </div>
+<script>
+//Header 고정
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+        
+</body>
+</html>

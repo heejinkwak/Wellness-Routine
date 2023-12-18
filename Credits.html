@@ -100,7 +100,7 @@
         }
     }
 
-    .sticky {
+    .stay {
         position: fixed;
         top: 0;
         width: 100%;
@@ -167,13 +167,13 @@
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+var stay = header.offsetTop;
 
 function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
+  if (window.pageYOffset > stay) {
+    header.classList.add("stay");
   } else {
-    header.classList.remove("sticky");
+    header.classList.remove("stay");
   }
 }
 </script>
